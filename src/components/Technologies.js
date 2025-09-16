@@ -1,17 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Code2, 
-  Database, 
-  Cloud, 
-  Shield, 
-  Zap, 
-  Globe, 
-  Smartphone, 
+import {
+  Cloud,
+  Shield,
+  Smartphone,
   Brain,
+  Server,
+  Code2,
   GitBranch,
   Cpu,
-  Server,
   Lock
 } from 'lucide-react';
 

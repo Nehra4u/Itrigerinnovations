@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import { useTheme } from '../context/ThemeContext';
 
 const Logo = ({ className = '', size = 'default' }) => {
-  const { isDark } = useTheme();
   
   const sizeClasses = {
     small: 'h-5 md:h-6',

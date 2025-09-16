@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { BarChart3, TrendingUp, Database, Eye, Brain, Zap, Target, Globe, CheckCircle, ArrowRight, PieChart, LineChart } from 'lucide-react';
+import { BarChart3, TrendingUp, Database, Brain, Users, Shield, CheckCircle, Settings, Workflow, Star, Eye, Target, Zap, ArrowRight } from 'lucide-react';
 
 const BIAnalytics = () => {
   const capabilities = [

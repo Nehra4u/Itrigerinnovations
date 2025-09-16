@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowLeft, CheckCircle, Bug, Shield, Target, Monitor, ArrowRight, TestTube, FileCheck, Users } from 'lucide-react';
+import { ArrowLeft, CheckCircle, Bug, Shield, Target, Monitor, ArrowRight, TestTube, FileCheck, BarChart3, Globe, Settings, Workflow, Star, Eye, TrendingUp, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const QA = () => {

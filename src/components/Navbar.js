@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Code, ChevronDown, Monitor, Smartphone, Settings, Brain, TrendingUp, Zap, Globe, CheckCircle, Building2, ShoppingCart, Workflow, BarChart3, Users, Phone, Briefcase, Target } from 'lucide-react';
+import { Menu, X, Sun, Moon, Monitor, Smartphone, Settings, Brain, TrendingUp, Zap, Globe, CheckCircle, Building2, ShoppingCart, Workflow, BarChart3, Users, Phone, Briefcase, Target, Heart, GraduationCap, Gamepad2, Store, Factory, HardHat, Truck, ShirtIcon, Tv, ThumbsUp, Plane, Sparkles, DollarSign, Shield, Scale, Network, List } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import Logo from './Logo';
 import ThemeToggle from './ThemeToggle';
@@ -11,6 +11,7 @@ const Navbar = () => {
   const [showServicesModal, setShowServicesModal] = useState(false);
   const [showFocusModal, setShowFocusModal] = useState(false);
   const [showAboutModal, setShowAboutModal] = useState(false);
+  const [showIndustryModal, setShowIndustryModal] = useState(false);
   const [prevScrolled, setPrevScrolled] = useState(false);
   const navigate = useNavigate();
 
@@ -45,7 +46,12 @@ const Navbar = () => {
       hasModal: true,
       modalType: 'services'
     },
-    { name: 'Technologies', href: '#technologies' },
+    { 
+      name: 'Industry', 
+      href: '#industry',
+      hasModal: true,
+      modalType: 'industry'
+    },
   ];
 
   const servicesData = [
@@ -165,6 +171,94 @@ const Navbar = () => {
     }
   ];
 
+  const industryData = [
+    {
+      icon: Heart,
+      title: 'Healthcare',
+      href: '/industry/healthcare'
+    },
+    {
+      icon: GraduationCap,
+      title: 'Education',
+      href: '/industry/education'
+    },
+    {
+      icon: Gamepad2,
+      title: 'Sports',
+      href: '/industry/sports'
+    },
+    {
+      icon: Store,
+      title: 'Marketplace',
+      href: '/industry/marketplace'
+    },
+    {
+      icon: Factory,
+      title: 'Manufacturing',
+      href: '/industry/manufacturing'
+    },
+    {
+      icon: HardHat,
+      title: 'Construction',
+      href: '/industry/construction'
+    },
+    {
+      icon: Truck,
+      title: 'Logistics',
+      href: '/industry/logistics'
+    },
+    {
+      icon: ShirtIcon,
+      title: 'Retail',
+      href: '/industry/retail'
+    },
+    {
+      icon: Tv,
+      title: 'Media & OTT',
+      href: '/industry/media-ott'
+    },
+    {
+      icon: ThumbsUp,
+      title: 'Social Media',
+      href: '/industry/social-media'
+    },
+    {
+      icon: Plane,
+      title: 'Travel',
+      href: '/industry/travel'
+    },
+    {
+      icon: Sparkles,
+      title: 'Beauty & Lifestyle',
+      href: '/industry/beauty-lifestyle'
+    },
+    {
+      icon: DollarSign,
+      title: 'Finance',
+      href: '/industry/finance'
+    },
+    {
+      icon: Shield,
+      title: 'Insurance',
+      href: '/industry/insurance'
+    },
+    {
+      icon: Scale,
+      title: 'Legal',
+      href: '/industry/legal'
+    },
+    {
+      icon: Network,
+      title: 'IT & Telecom',
+      href: '/industry/it-telecom'
+    },
+    {
+      icon: List,
+      title: 'On Demand',
+      href: '/industry/on-demand'
+    }
+  ];
+
   const handleNavigation = (href) => {
     if (href.startsWith('/')) {
       // Navigate to a different page
@@ -180,6 +274,7 @@ const Navbar = () => {
     setShowServicesModal(false);
     setShowFocusModal(false);
     setShowAboutModal(false);
+    setShowIndustryModal(false);
   };
 
   return (
@@ -190,27 +285,27 @@ const Navbar = () => {
       transition={{ duration: 0.5 }}
     >
              <div className=" mx-auto px-4 sm:px-6 lg:px-8">
-         <div className={`flex items-center justify-between  ${scrolled? "h-16": "h-20"}`}>
+         <div className={`flex items-center ${scrolled? "h-16": "h-20"}`}>
                      {/* Logo */}
-           <motion.div
-            whileHover={{ scale: 1.05 }}
-            key={`logo-${scrolled}`}
-            initial={{ x: scrolled && !prevScrolled ? -200 : (!scrolled && prevScrolled ? 200 : 0), opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ 
-              type: "spring", 
-              stiffness: 300, 
-              damping: 30,
-              duration: 0.8
-            }}
-            className="flex items-center cursor-pointer"
-            onClick={() => navigate('/')}
-          >
-            <Logo size="default" />
-          </motion.div>
+          <motion.div
+           whileHover={{ scale: 1.05 }}
+           key={`logo-${scrolled}`}
+           initial={{ x: scrolled && !prevScrolled ? -200 : (!scrolled && prevScrolled ? 200 : 0), opacity: 0 }}
+           animate={{ x: 0, opacity: 1 }}
+           transition={{ 
+             type: "spring", 
+             stiffness: 300, 
+             damping: 30,
+             duration: 0.8
+           }}
+           className="flex items-center cursor-pointer flex-shrink-0"
+           onClick={() => navigate('/')}
+         >
+           <Logo size="default" />
+         </motion.div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-6">
+          <div className="hidden lg:flex items-center justify-center flex-1 space-x-8">
             {navItems.map((item) => (
               <div key={item.name} className="relative">
                 {item.hasModal ? (
@@ -223,6 +318,8 @@ const Navbar = () => {
                         setShowFocusModal(true);
                       } else if (item.modalType === 'about') {
                         setShowAboutModal(true);
+                      } else if (item.modalType === 'industry') {
+                        setShowIndustryModal(true);
                       }
                     }}
                     onMouseLeave={() => {
@@ -232,6 +329,8 @@ const Navbar = () => {
                         setShowFocusModal(false);
                       } else if (item.modalType === 'about') {
                         setShowAboutModal(false);
+                      } else if (item.modalType === 'industry') {
+                        setShowIndustryModal(false);
                       }
                     }}
                   >
@@ -377,9 +476,9 @@ const Navbar = () => {
                           animate={{ opacity: 1, y: 0, scale: 1 }}
                           exit={{ opacity: 0, y: 10, scale: 0.95 }}
                           transition={{ duration: 0.2 }}
-                          className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-[600px] bg-white dark:bg-gray-900 rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden z-50"
+                          className="absolute top-full left-2/3 transform -translate-x-1/2 mt-2 w-[600px] bg-white dark:bg-gray-900 rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden z-50"
                         >
-                          <div className="p-8">
+                          <div className="p-4">
                             <div className="grid grid-cols-2 gap-1">
                               {aboutData.map((about, index) => {
                                 const IconComponent = about.icon;
@@ -392,7 +491,7 @@ const Navbar = () => {
                                     className="group cursor-pointer p-1 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200"
                                     onClick={() => handleNavigation(about.href)}
                                   >
-                                    <div className="flex items-start gap-4">
+                                    <div className="flex items-start gap-1">
                                       <div className="flex-shrink-0">
                                         <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
                                           <IconComponent className="w-6 h-6 text-white" />
@@ -405,6 +504,48 @@ const Navbar = () => {
                                         <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
                                           {about.description}
                                         </p>
+                                      </div>
+                                    </div>
+                                  </motion.div>
+                                );
+                              })}
+                            </div>
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                    
+                    {/* Industry Modal */}
+                    <AnimatePresence>
+                      {showIndustryModal && item.modalType === 'industry' && (
+                        <motion.div
+                          initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                          animate={{ opacity: 1, y: 0, scale: 1 }}
+                          exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                          transition={{ duration: 0.2 }}
+                          className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-[700px] bg-white dark:bg-gray-900 rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden z-50"
+                        >
+                          <div className="p-4">
+                            <div className="grid grid-cols-2 gap-1">
+                              {industryData.map((industry, index) => {
+                                const IconComponent = industry.icon;
+                                return (
+                                  <motion.div
+                                    key={industry.title}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ delay: index * 0.04 }}
+                                    className="group cursor-pointer p-1 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200"
+                                    onClick={() => handleNavigation(industry.href)}
+                                  >
+                                    <div className="flex items-center gap-1">
+                                      <div className="flex-shrink-0">
+                                        <IconComponent className="w-6 h-6 text-gray-700 dark:text-gray-300 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-200" />
+                                      </div>
+                                      <div className="flex-1">
+                                        <h3 className="font-medium text-gray-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors text-base">
+                                          {industry.title}
+                                        </h3>
                                       </div>
                                     </div>
                                   </motion.div>
@@ -431,7 +572,7 @@ const Navbar = () => {
           </div>
 
           {/* Theme Toggle & CTA Button */}
-          <div className="hidden lg:flex items-center space-x-3">
+          <div className="hidden lg:flex items-center space-x-3 flex-shrink-0">
             {!scrolled ? <ThemeToggle /> : null}
             <motion.div
               key={`contact-wrapper-${scrolled}`}

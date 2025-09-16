@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Code, Cpu, Zap, Globe, Database, Shield, ArrowRight, Play } from 'lucide-react';
+import { ArrowRight, Play, Users, Star, CheckCircle, TrendingUp, Code, Cpu, Database, Shield } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 
 const Hero = () => {
@@ -77,27 +77,6 @@ const Hero = () => {
 
       {/* Main Content */}
       <div className="container-custom relative z-10 text-center px-4">
-        {/* Company Logo & Tagline */}
-        <motion.div
-          className="mb-8"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <div className={`inline-flex items-center space-x-3 backdrop-blur-sm rounded-full px-6 py-3 mb-6 ${
-            isDark 
-              ? 'bg-white/5 border border-white/10'
-              : 'bg-gray-900/5 border border-gray-900/10'
-          }`}>
-            <div className={`w-2 h-2 rounded-full ${
-              isDark ? 'bg-primary-400 animate-pulse' : 'bg-black'
-            }`}></div>
-            <span className={`text-sm font-medium ${
-              isDark ? 'text-white/70' : 'text-black'
-            }`}>Core Development Company</span>
-          </div>
-        </motion.div>
-
         {/* Main Headline */}
         <motion.h1
           className={`text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight ${

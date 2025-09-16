@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowLeft, Code, Database, Globe, Smartphone, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
+import { Code, Smartphone, Globe, Database, Shield, CheckCircle, ArrowLeft, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const WebDevelopment = () => {

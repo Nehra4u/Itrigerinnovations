@@ -1,11 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Settings, Network, Database, Cloud, Zap, Shield, Cpu, Globe, CheckCircle, ArrowRight, TrendingUp, Link } from 'lucide-react';
+import { Workflow, Database, Cloud, Shield, Globe, CheckCircle, Settings, Cpu, Link, ArrowRight } from 'lucide-react';
 
 const TechnologyIntegration = () => {
   const capabilities = [
     {
-      icon: Network,
+      icon: Workflow,
       title: "API Integration",
       description: "Seamless integration with third-party APIs and microservices architecture"
     },

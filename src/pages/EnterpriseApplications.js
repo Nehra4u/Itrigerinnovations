@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Building2, Users, Shield, Zap, BarChart3, Globe, CheckCircle, ArrowRight, Star, TrendingUp } from 'lucide-react';
+import { Building2, Users, Database, Shield, Globe, CheckCircle, Settings, Workflow, Eye, BarChart3, TrendingUp, Zap, ArrowRight } from 'lucide-react';
 
 const EnterpriseApplications = () => {
   const features = [

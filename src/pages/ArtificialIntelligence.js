@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Brain, Cpu, Eye, MessageSquare, BarChart3, Zap, Shield, Rocket, TrendingUp, Bot, Network, Database } from 'lucide-react';
+import { Brain, Database, Shield, Bot, BarChart3, Eye, MessageSquare, Rocket, Network } from 'lucide-react';
 
 const ArtificialIntelligence = () => {
   const capabilities = [

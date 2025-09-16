@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowLeft, Zap, GitBranch, Server, Shield, Monitor, CheckCircle, ArrowRight, Cloud, Database, Settings } from 'lucide-react';
+import { ArrowLeft, Zap, GitBranch, Server, Shield, Monitor, CheckCircle, ArrowRight, Cloud, Database, Settings, Workflow, BarChart3, Users, Globe, TrendingUp, Star, Eye, Cpu } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const DevOps = () => {

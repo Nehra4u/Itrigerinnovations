@@ -1,89 +1,82 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Workflow, Settings, Bot, Database, Shield, CheckCircle, BarChart3, Users, Globe, TrendingUp, Star, Cog, ArrowRight, Target, Cpu } from 'lucide-react';
+import { GraduationCap, Book, BarChart3, Globe, CheckCircle, Settings, Workflow, Star, Eye, Shield, Monitor, Brain, Video, Database, Smartphone, Award, BookOpen } from 'lucide-react';
 
-const BusinessAutomation = () => {
-  const automationAreas = [
+const Education = () => {
+  const capabilities = [
     {
-      icon: Workflow,
-      title: "Process Automation",
-      description: "Streamline repetitive tasks and complex workflows with intelligent automation"
+      icon: Monitor,
+      title: "E-Learning Platforms",
+      description: "Comprehensive online learning management systems with interactive content delivery"
     },
     {
-      icon: Users,
-      title: "HR Automation",
-      description: "Automate recruitment, onboarding, payroll, and performance management processes"
+      icon: Brain,
+      title: "AI-Powered Learning",
+      description: "Personalized learning experiences using artificial intelligence and adaptive algorithms"
     },
     {
-      icon: BarChart3,
-      title: "Financial Automation",
-      description: "Automated invoicing, expense management, and financial reporting systems"
+      icon: Video,
+      title: "Virtual Classrooms",
+      description: "Interactive virtual learning environments with real-time collaboration tools"
     },
     {
-      icon: Target,
-      title: "Sales Automation",
-      description: "Lead scoring, pipeline management, and automated follow-up systems"
+      icon: Database,
+      title: "Student Information Systems",
+      description: "Complete student data management and academic progress tracking solutions"
     }
   ];
 
-  const solutions = [
+  const educationSolutions = [
     {
-      title: "Robotic Process Automation (RPA)",
-      description: "Deploy software robots to handle repetitive, rule-based tasks across multiple applications",
-      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      benefits: ["24/7 Operation", "Error Reduction", "Cost Savings"]
+      title: "Learning Management Systems",
+      description: "Comprehensive LMS platforms that facilitate online learning, course management, student assessment, and progress tracking with interactive multimedia content and collaboration tools.",
+      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80",
+      features: ["Course Management", "Student Assessment", "Progress Tracking"]
     },
     {
-      title: "Workflow Management Systems",
-      description: "Design and implement custom workflows that optimize business processes and improve efficiency",
-      image: "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      benefits: ["Process Optimization", "Task Tracking", "Team Collaboration"]
+      title: "Virtual Reality Learning",
+      description: "Immersive VR educational experiences that bring abstract concepts to life, enabling students to explore historical sites, conduct virtual experiments, and engage in hands-on learning.",
+      image: "https://images.unsplash.com/photo-1592478411213-6153e4ebc696?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2012&q=80",
+      features: ["Immersive Learning", "Virtual Experiments", "3D Visualization"]
     },
     {
-      title: "Intelligent Document Processing",
-      description: "AI-powered document extraction, classification, and processing for paperless operations",
-      image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2026&q=80",
-      benefits: ["Data Extraction", "Document Classification", "Compliance Management"]
+      title: "Adaptive Learning Systems",
+      description: "AI-driven personalized learning platforms that adapt to individual student needs, learning pace, and preferences to optimize educational outcomes and engagement.",
+      image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2022&q=80",
+      features: ["Personalized Learning", "AI Recommendations", "Performance Analytics"]
     }
   ];
 
-  const benefits = [
-    { title: "Productivity Increase", value: "75%", description: "Boost in operational efficiency" },
-    { title: "Cost Reduction", value: "60%", description: "Lower operational expenses" },
-    { title: "Error Reduction", value: "95%", description: "Fewer manual errors" },
-    { title: "Time Savings", value: "80%", description: "Faster process completion" }
-  ];
-
-  const automationTrends = [
+  const edTechTrends = [
     {
-      icon: Bot,
-      title: "Intelligent Automation",
-      description: "AI-powered automation that learns and adapts to changing business conditions"
+      icon: Brain,
+      title: "AI in Education",
+      description: "Artificial intelligence transforming personalized learning and automated assessment systems"
     },
     {
-      icon: Cpu,
-      title: "Hyperautomation",
-      description: "End-to-end automation combining RPA, AI, and machine learning technologies"
+      icon: Globe,
+      title: "Remote Learning",
+      description: "Advanced online education platforms enabling global access to quality education"
     },
     {
-      icon: TrendingUp,
-      title: "Process Mining",
-      description: "Data-driven process discovery and optimization using advanced analytics"
+      icon: Smartphone,
+      title: "Mobile Learning",
+      description: "Mobile-first educational apps providing learning opportunities anytime, anywhere"
     },
     {
-      icon: Cog,
-      title: "Low-Code Automation",
-      description: "Citizen developer platforms for rapid automation deployment"
+      icon: Award,
+      title: "Gamification",
+      description: "Game-based learning approaches increasing student engagement and motivation"
     }
   ];
 
-  const industries = [
-    { name: "Banking", icon: "🏦", automation: "Loan Processing" },
-    { name: "Healthcare", icon: "🏥", automation: "Patient Records" },
-    { name: "Insurance", icon: "🛡️", automation: "Claims Processing" },
-    { name: "Manufacturing", icon: "🏭", automation: "Quality Control" },
-    { name: "Retail", icon: "🛍️", automation: "Inventory Management" },
-    { name: "Logistics", icon: "🚚", automation: "Order Fulfillment" }
+  const educationLevels = [
+    { name: "K-12 Education", icon: "🎒", students: "2M+" },
+    { name: "Higher Education", icon: "🎓", students: "500K+" },
+    { name: "Corporate Training", icon: "💼", students: "1M+" },
+    { name: "Online Courses", icon: "💻", students: "5M+" },
+    { name: "Skill Development", icon: "🔧", students: "3M+" },
+    { name: "Language Learning", icon: "🌍", students: "2.5M+" }
   ];
 
   return (
@@ -99,37 +92,40 @@ const BusinessAutomation = () => {
           >
             <div className="flex justify-center mb-6">
               <div className="w-20 h-20 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-2xl flex items-center justify-center">
-                <Workflow className="w-10 h-10 text-white" />
+                <GraduationCap className="w-10 h-10 text-white" />
               </div>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-              Business <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-secondary-600">Automation</span>
+              Education <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-secondary-600">Technology</span>
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Streamlining operations and boosting productivity with custom business automation solutions that transform manual processes into intelligent workflows.
+              Revolutionizing education through innovative technology solutions that enhance learning experiences, improve accessibility, and empower educators worldwide.
             </p>
           </motion.div>
 
-          {/* Benefits Grid */}
+          {/* Hero Stats */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
           >
-            {benefits.map((benefit, index) => (
-              <div key={index} className="text-center">
-                <div className="text-3xl font-bold text-primary-600 dark:text-primary-400 mb-2">
-                  {benefit.value}
-                </div>
-                <div className="font-semibold text-gray-900 dark:text-white mb-1">
-                  {benefit.title}
-                </div>
-                <div className="text-sm text-gray-600 dark:text-gray-300">
-                  {benefit.description}
-                </div>
-              </div>
-            ))}
+            <div className="text-center">
+              <div className="text-3xl font-bold text-primary-600 dark:text-primary-400 mb-2">10M+</div>
+              <div className="text-gray-600 dark:text-gray-300">Students Reached</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-secondary-600 dark:text-secondary-400 mb-2">95%</div>
+              <div className="text-gray-600 dark:text-gray-300">Satisfaction Rate</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-green-600 dark:text-green-400 mb-2">50%</div>
+              <div className="text-gray-600 dark:text-gray-300">Learning Improvement</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-orange-600 dark:text-orange-400 mb-2">24/7</div>
+              <div className="text-gray-600 dark:text-gray-300">Learning Access</div>
+            </div>
           </motion.div>
 
           {/* Hero Image */}
@@ -140,20 +136,20 @@ const BusinessAutomation = () => {
             className="relative rounded-2xl overflow-hidden shadow-2xl"
           >
             <img
-              src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-              alt="Business Automation"
+              src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+              alt="Education Technology"
               className="w-full h-96 object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
             <div className="absolute bottom-8 left-8 text-white">
-              <h3 className="text-2xl font-bold mb-2">Intelligent Process Automation</h3>
-              <p className="text-lg opacity-90">Transforming business operations</p>
+              <h3 className="text-2xl font-bold mb-2">Future of Learning</h3>
+              <p className="text-lg opacity-90">Empowering education through technology</p>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Automation Areas */}
+      {/* Capabilities Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-800">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -164,19 +160,19 @@ const BusinessAutomation = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
-              Automation Areas
+              Educational Technology Solutions
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Comprehensive automation solutions across all business functions
+              Comprehensive EdTech solutions designed to transform learning experiences and educational outcomes
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {automationAreas.map((area, index) => {
-              const IconComponent = area.icon;
+            {capabilities.map((capability, index) => {
+              const IconComponent = capability.icon;
               return (
                 <motion.div
-                  key={area.title}
+                  key={capability.title}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -187,10 +183,10 @@ const BusinessAutomation = () => {
                     <IconComponent className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-                    {area.title}
+                    {capability.title}
                   </h3>
                   <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                    {area.description}
+                    {capability.description}
                   </p>
                 </motion.div>
               );
@@ -199,7 +195,7 @@ const BusinessAutomation = () => {
         </div>
       </section>
 
-      {/* Solutions Section */}
+      {/* Education Solutions Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -210,15 +206,15 @@ const BusinessAutomation = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
-              Automation Solutions
+              Innovative Learning Solutions
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Advanced automation technologies that transform how businesses operate
+              Cutting-edge educational applications that enhance teaching and learning experiences
             </p>
           </motion.div>
 
           <div className="space-y-16">
-            {solutions.map((solution, index) => (
+            {educationSolutions.map((solution, index) => (
               <motion.div
                 key={solution.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -241,12 +237,11 @@ const BusinessAutomation = () => {
                   <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
                     {solution.description}
                   </p>
-                  <div className="space-y-4 mb-8">
-                    {solution.benefits.map((benefit, benefitIndex) => (
-                      <div key={benefitIndex} className="flex items-center gap-3">
-                        <CheckCircle className="w-6 h-6 text-green-500" />
-                        <span className="text-gray-700 dark:text-gray-300 font-medium">
-                          {benefit}
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                    {solution.features.map((feature, featureIndex) => (
+                      <div key={featureIndex} className="bg-gradient-to-r from-primary-100 to-secondary-100 dark:from-primary-900/30 dark:to-secondary-900/30 rounded-lg p-4 text-center">
+                        <span className="text-gray-800 dark:text-gray-200 font-medium">
+                          {feature}
                         </span>
                       </div>
                     ))}
@@ -257,7 +252,7 @@ const BusinessAutomation = () => {
                     className="bg-gradient-to-r from-primary-600 to-secondary-600 text-white px-8 py-4 rounded-full font-semibold flex items-center gap-2 hover:shadow-lg transition-shadow"
                   >
                     Explore Solution
-                    <ArrowRight className="w-5 h-5" />
+                    <BookOpen className="w-5 h-5" />
                   </motion.button>
                 </div>
               </motion.div>
@@ -266,7 +261,7 @@ const BusinessAutomation = () => {
         </div>
       </section>
 
-      {/* Industry Applications */}
+      {/* Education Levels */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-800">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -277,17 +272,17 @@ const BusinessAutomation = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
-              Industry Applications
+              Education Levels We Serve
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Automation solutions tailored for specific industry requirements
+              Comprehensive educational solutions across all learning levels and environments
             </p>
           </motion.div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {industries.map((industry, index) => (
+            {educationLevels.map((level, index) => (
               <motion.div
-                key={industry.name}
+                key={level.name}
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
@@ -295,21 +290,21 @@ const BusinessAutomation = () => {
                 className="bg-gradient-to-br from-primary-50 to-secondary-50 dark:from-gray-700 dark:to-gray-600 rounded-2xl p-6 text-center hover:shadow-lg transition-shadow group"
               >
                 <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">
-                  {industry.icon}
+                  {level.icon}
                 </div>
                 <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
-                  {industry.name}
+                  {level.name}
                 </h3>
-                <p className="text-sm text-gray-600 dark:text-gray-300">
-                  {industry.automation}
-                </p>
+                <div className="text-primary-600 dark:text-primary-400 font-bold">
+                  {level.students}
+                </div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Latest Trends */}
+      {/* EdTech Trends Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary-50 to-secondary-50 dark:from-gray-900 dark:to-gray-800">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -320,15 +315,15 @@ const BusinessAutomation = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
-              Latest Automation Trends
+              Educational Technology Trends
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Emerging trends shaping the future of business automation
+              Stay ahead with emerging EdTech trends and innovations shaping the future of education
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {automationTrends.map((trend, index) => {
+            {edTechTrends.map((trend, index) => {
               const IconComponent = trend.icon;
               return (
                 <motion.div
@@ -365,17 +360,17 @@ const BusinessAutomation = () => {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
-              Ready to Automate Your Business?
+              Transform Education with Technology
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
-              Transform your operations with intelligent automation solutions
+              Partner with us to revolutionize learning experiences and educational outcomes
             </p>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-gradient-to-r from-primary-600 to-secondary-600 text-white px-12 py-4 rounded-full text-lg font-semibold hover:shadow-lg transition-shadow"
             >
-              Start Automation
+              Start Your EdTech Journey
             </motion.button>
           </motion.div>
         </div>
@@ -384,4 +379,4 @@ const BusinessAutomation = () => {
   );
 };
 
-export default BusinessAutomation;
+export default Education;

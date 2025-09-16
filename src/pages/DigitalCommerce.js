@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ShoppingCart, CreditCard, Smartphone, Globe, TrendingUp, Users, Shield, Zap, Star, ArrowRight, CheckCircle, BarChart3 } from 'lucide-react';
+import { ShoppingCart, CreditCard, Smartphone, BarChart3, Shield, Globe, CheckCircle, Settings, Workflow, Eye, Users, TrendingUp, Zap, ArrowRight } from 'lucide-react';
 
 const DigitalCommerce = () => {
   const features = [

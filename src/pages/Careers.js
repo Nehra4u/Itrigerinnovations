@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Briefcase, MapPin, Clock, DollarSign, Users, Star, ArrowRight, CheckCircle, Code, Brain, Zap, Globe } from 'lucide-react';
+import { Users, MapPin, Clock, DollarSign, ArrowRight, Star, TrendingUp, Globe, Shield, Briefcase, GraduationCap, Heart, Brain, Zap } from 'lucide-react';
 
 const Careers = () => {
   const jobOpenings = [

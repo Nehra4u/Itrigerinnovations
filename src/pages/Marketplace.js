@@ -1,89 +1,82 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Workflow, Settings, Bot, Database, Shield, CheckCircle, BarChart3, Users, Globe, TrendingUp, Star, Cog, ArrowRight, Target, Cpu } from 'lucide-react';
+import { Store, Users, CreditCard, Shield, Globe, CheckCircle, Settings, Workflow, Star, Eye, TrendingUp, Search, Bot, Smartphone, ShoppingCart } from 'lucide-react';
 
-const BusinessAutomation = () => {
-  const automationAreas = [
+const Marketplace = () => {
+  const capabilities = [
     {
-      icon: Workflow,
-      title: "Process Automation",
-      description: "Streamline repetitive tasks and complex workflows with intelligent automation"
+      icon: Store,
+      title: "Multi-Vendor Platforms",
+      description: "Comprehensive marketplace solutions connecting multiple vendors with customers seamlessly"
+    },
+    {
+      icon: CreditCard,
+      title: "Payment Integration",
+      description: "Secure payment processing with multiple gateways and cryptocurrency support"
+    },
+    {
+      icon: Search,
+      title: "Smart Search & Discovery",
+      description: "AI-powered search and recommendation engines for enhanced product discovery"
+    },
+    {
+      icon: Shield,
+      title: "Trust & Safety",
+      description: "Advanced security measures and verification systems for safe marketplace transactions"
+    }
+  ];
+
+  const marketplaceSolutions = [
+    {
+      title: "Multi-Vendor E-commerce Platform",
+      description: "Comprehensive marketplace platform enabling multiple vendors to sell products with integrated inventory management, order processing, and vendor analytics for seamless operations.",
+      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
+      features: ["Vendor Management", "Inventory Sync", "Order Processing"]
+    },
+    {
+      title: "Digital Services Marketplace",
+      description: "Platform for digital services and freelance work featuring skill-based matching, project management tools, secure payments, and quality assurance systems for service providers.",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2015&q=80",
+      features: ["Skill Matching", "Project Management", "Quality Assurance"]
+    },
+    {
+      title: "B2B Marketplace Solutions",
+      description: "Enterprise-grade B2B marketplace platform with bulk ordering, custom pricing, supplier management, and advanced analytics for wholesale and business transactions.",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80",
+      features: ["Bulk Ordering", "Custom Pricing", "Supplier Management"]
+    }
+  ];
+
+  const marketplaceTrends = [
+    {
+      icon: Bot,
+      title: "AI-Powered Recommendations",
+      description: "Machine learning algorithms providing personalized product and service recommendations"
+    },
+    {
+      icon: Globe,
+      title: "Global Marketplace",
+      description: "Cross-border commerce solutions with multi-currency and localization support"
+    },
+    {
+      icon: Smartphone,
+      title: "Mobile-First Commerce",
+      description: "Mobile-optimized marketplace experiences with app-based shopping and payments"
     },
     {
       icon: Users,
-      title: "HR Automation",
-      description: "Automate recruitment, onboarding, payroll, and performance management processes"
-    },
-    {
-      icon: BarChart3,
-      title: "Financial Automation",
-      description: "Automated invoicing, expense management, and financial reporting systems"
-    },
-    {
-      icon: Target,
-      title: "Sales Automation",
-      description: "Lead scoring, pipeline management, and automated follow-up systems"
+      title: "Social Commerce",
+      description: "Integration of social features and community-driven marketplace experiences"
     }
   ];
 
-  const solutions = [
-    {
-      title: "Robotic Process Automation (RPA)",
-      description: "Deploy software robots to handle repetitive, rule-based tasks across multiple applications",
-      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      benefits: ["24/7 Operation", "Error Reduction", "Cost Savings"]
-    },
-    {
-      title: "Workflow Management Systems",
-      description: "Design and implement custom workflows that optimize business processes and improve efficiency",
-      image: "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      benefits: ["Process Optimization", "Task Tracking", "Team Collaboration"]
-    },
-    {
-      title: "Intelligent Document Processing",
-      description: "AI-powered document extraction, classification, and processing for paperless operations",
-      image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2026&q=80",
-      benefits: ["Data Extraction", "Document Classification", "Compliance Management"]
-    }
-  ];
-
-  const benefits = [
-    { title: "Productivity Increase", value: "75%", description: "Boost in operational efficiency" },
-    { title: "Cost Reduction", value: "60%", description: "Lower operational expenses" },
-    { title: "Error Reduction", value: "95%", description: "Fewer manual errors" },
-    { title: "Time Savings", value: "80%", description: "Faster process completion" }
-  ];
-
-  const automationTrends = [
-    {
-      icon: Bot,
-      title: "Intelligent Automation",
-      description: "AI-powered automation that learns and adapts to changing business conditions"
-    },
-    {
-      icon: Cpu,
-      title: "Hyperautomation",
-      description: "End-to-end automation combining RPA, AI, and machine learning technologies"
-    },
-    {
-      icon: TrendingUp,
-      title: "Process Mining",
-      description: "Data-driven process discovery and optimization using advanced analytics"
-    },
-    {
-      icon: Cog,
-      title: "Low-Code Automation",
-      description: "Citizen developer platforms for rapid automation deployment"
-    }
-  ];
-
-  const industries = [
-    { name: "Banking", icon: "🏦", automation: "Loan Processing" },
-    { name: "Healthcare", icon: "🏥", automation: "Patient Records" },
-    { name: "Insurance", icon: "🛡️", automation: "Claims Processing" },
-    { name: "Manufacturing", icon: "🏭", automation: "Quality Control" },
-    { name: "Retail", icon: "🛍️", automation: "Inventory Management" },
-    { name: "Logistics", icon: "🚚", automation: "Order Fulfillment" }
+  const marketplaceTypes = [
+    { name: "E-commerce", icon: "🛒", vendors: "50K+" },
+    { name: "Services", icon: "🔧", vendors: "25K+" },
+    { name: "Digital Products", icon: "💻", vendors: "15K+" },
+    { name: "B2B Trading", icon: "🏢", vendors: "10K+" },
+    { name: "Handmade Goods", icon: "🎨", vendors: "30K+" },
+    { name: "Food Delivery", icon: "🍕", vendors: "20K+" }
   ];
 
   return (
@@ -99,37 +92,40 @@ const BusinessAutomation = () => {
           >
             <div className="flex justify-center mb-6">
               <div className="w-20 h-20 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-2xl flex items-center justify-center">
-                <Workflow className="w-10 h-10 text-white" />
+                <Store className="w-10 h-10 text-white" />
               </div>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-              Business <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-secondary-600">Automation</span>
+              Marketplace <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-secondary-600">Solutions</span>
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Streamlining operations and boosting productivity with custom business automation solutions that transform manual processes into intelligent workflows.
+              Building powerful marketplace platforms that connect buyers and sellers, enabling seamless commerce experiences with advanced features and scalable architecture.
             </p>
           </motion.div>
 
-          {/* Benefits Grid */}
+          {/* Hero Stats */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
           >
-            {benefits.map((benefit, index) => (
-              <div key={index} className="text-center">
-                <div className="text-3xl font-bold text-primary-600 dark:text-primary-400 mb-2">
-                  {benefit.value}
-                </div>
-                <div className="font-semibold text-gray-900 dark:text-white mb-1">
-                  {benefit.title}
-                </div>
-                <div className="text-sm text-gray-600 dark:text-gray-300">
-                  {benefit.description}
-                </div>
-              </div>
-            ))}
+            <div className="text-center">
+              <div className="text-3xl font-bold text-primary-600 dark:text-primary-400 mb-2">150K+</div>
+              <div className="text-gray-600 dark:text-gray-300">Active Vendors</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-secondary-600 dark:text-secondary-400 mb-2">10M+</div>
+              <div className="text-gray-600 dark:text-gray-300">Transactions</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-green-600 dark:text-green-400 mb-2">99.8%</div>
+              <div className="text-gray-600 dark:text-gray-300">Success Rate</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-orange-600 dark:text-orange-400 mb-2">24/7</div>
+              <div className="text-gray-600 dark:text-gray-300">Platform Support</div>
+            </div>
           </motion.div>
 
           {/* Hero Image */}
@@ -140,20 +136,20 @@ const BusinessAutomation = () => {
             className="relative rounded-2xl overflow-hidden shadow-2xl"
           >
             <img
-              src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-              alt="Business Automation"
+              src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
+              alt="Marketplace Technology"
               className="w-full h-96 object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
             <div className="absolute bottom-8 left-8 text-white">
-              <h3 className="text-2xl font-bold mb-2">Intelligent Process Automation</h3>
-              <p className="text-lg opacity-90">Transforming business operations</p>
+              <h3 className="text-2xl font-bold mb-2">Next-Gen Marketplace Platforms</h3>
+              <p className="text-lg opacity-90">Connecting commerce worldwide</p>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Automation Areas */}
+      {/* Capabilities Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-800">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -164,19 +160,19 @@ const BusinessAutomation = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
-              Automation Areas
+              Marketplace Technology Solutions
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Comprehensive automation solutions across all business functions
+              Comprehensive marketplace technology solutions designed to create thriving commerce ecosystems
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {automationAreas.map((area, index) => {
-              const IconComponent = area.icon;
+            {capabilities.map((capability, index) => {
+              const IconComponent = capability.icon;
               return (
                 <motion.div
-                  key={area.title}
+                  key={capability.title}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -187,10 +183,10 @@ const BusinessAutomation = () => {
                     <IconComponent className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-                    {area.title}
+                    {capability.title}
                   </h3>
                   <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                    {area.description}
+                    {capability.description}
                   </p>
                 </motion.div>
               );
@@ -199,7 +195,7 @@ const BusinessAutomation = () => {
         </div>
       </section>
 
-      {/* Solutions Section */}
+      {/* Marketplace Solutions Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -210,15 +206,15 @@ const BusinessAutomation = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
-              Automation Solutions
+              Advanced Marketplace Solutions
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Advanced automation technologies that transform how businesses operate
+              Innovative marketplace applications that drive commerce growth and enhance user experiences
             </p>
           </motion.div>
 
           <div className="space-y-16">
-            {solutions.map((solution, index) => (
+            {marketplaceSolutions.map((solution, index) => (
               <motion.div
                 key={solution.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -241,12 +237,11 @@ const BusinessAutomation = () => {
                   <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
                     {solution.description}
                   </p>
-                  <div className="space-y-4 mb-8">
-                    {solution.benefits.map((benefit, benefitIndex) => (
-                      <div key={benefitIndex} className="flex items-center gap-3">
-                        <CheckCircle className="w-6 h-6 text-green-500" />
-                        <span className="text-gray-700 dark:text-gray-300 font-medium">
-                          {benefit}
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                    {solution.features.map((feature, featureIndex) => (
+                      <div key={featureIndex} className="bg-gradient-to-r from-primary-100 to-secondary-100 dark:from-primary-900/30 dark:to-secondary-900/30 rounded-lg p-4 text-center">
+                        <span className="text-gray-800 dark:text-gray-200 font-medium">
+                          {feature}
                         </span>
                       </div>
                     ))}
@@ -257,7 +252,7 @@ const BusinessAutomation = () => {
                     className="bg-gradient-to-r from-primary-600 to-secondary-600 text-white px-8 py-4 rounded-full font-semibold flex items-center gap-2 hover:shadow-lg transition-shadow"
                   >
                     Explore Solution
-                    <ArrowRight className="w-5 h-5" />
+                    <ShoppingCart className="w-5 h-5" />
                   </motion.button>
                 </div>
               </motion.div>
@@ -266,7 +261,7 @@ const BusinessAutomation = () => {
         </div>
       </section>
 
-      {/* Industry Applications */}
+      {/* Marketplace Types */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-800">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -277,17 +272,17 @@ const BusinessAutomation = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
-              Industry Applications
+              Marketplace Types We Build
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Automation solutions tailored for specific industry requirements
+              Diverse marketplace solutions across various industries and business models
             </p>
           </motion.div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {industries.map((industry, index) => (
+            {marketplaceTypes.map((type, index) => (
               <motion.div
-                key={industry.name}
+                key={type.name}
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
@@ -295,21 +290,21 @@ const BusinessAutomation = () => {
                 className="bg-gradient-to-br from-primary-50 to-secondary-50 dark:from-gray-700 dark:to-gray-600 rounded-2xl p-6 text-center hover:shadow-lg transition-shadow group"
               >
                 <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">
-                  {industry.icon}
+                  {type.icon}
                 </div>
                 <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
-                  {industry.name}
+                  {type.name}
                 </h3>
-                <p className="text-sm text-gray-600 dark:text-gray-300">
-                  {industry.automation}
-                </p>
+                <div className="text-primary-600 dark:text-primary-400 font-bold">
+                  {type.vendors}
+                </div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Latest Trends */}
+      {/* Marketplace Trends Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary-50 to-secondary-50 dark:from-gray-900 dark:to-gray-800">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -320,15 +315,15 @@ const BusinessAutomation = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
-              Latest Automation Trends
+              Marketplace Technology Trends
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Emerging trends shaping the future of business automation
+              Stay ahead with emerging marketplace technologies and innovations shaping the future of commerce
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {automationTrends.map((trend, index) => {
+            {marketplaceTrends.map((trend, index) => {
               const IconComponent = trend.icon;
               return (
                 <motion.div
@@ -365,17 +360,17 @@ const BusinessAutomation = () => {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
-              Ready to Automate Your Business?
+              Build Your Marketplace with Us
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
-              Transform your operations with intelligent automation solutions
+              Partner with us to create a thriving marketplace platform that connects your community
             </p>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-gradient-to-r from-primary-600 to-secondary-600 text-white px-12 py-4 rounded-full text-lg font-semibold hover:shadow-lg transition-shadow"
             >
-              Start Automation
+              Start Your Marketplace Journey
             </motion.button>
           </motion.div>
         </div>
@@ -384,4 +379,4 @@ const BusinessAutomation = () => {
   );
 };
 
-export default BusinessAutomation;
+export default Marketplace;

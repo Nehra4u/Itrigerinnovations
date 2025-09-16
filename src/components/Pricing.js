@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Check, Star, ArrowRight, Calculator, Clock, Users, Zap } from 'lucide-react';
+import { Check, Star, Zap, Users, ArrowRight, Calculator } from 'lucide-react';
 
 const Pricing = () => {
   const [billingCycle, setBillingCycle] = useState('monthly');
@@ -96,7 +96,6 @@ const Pricing = () => {
     }
   ];
 
-  const currentPlan = plans.find(plan => plan.id === selectedPlan);
 
   return (
     <section id="pricing" className="section-padding bg-white dark:bg-gray-900">

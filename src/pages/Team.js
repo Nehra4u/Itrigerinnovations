@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Users, Award, Globe, Code, Brain, Zap, Target, CheckCircle, Star, TrendingUp } from 'lucide-react';
+import { Users, Award, Target, Zap, Brain, TrendingUp } from 'lucide-react';
 
 const Team = () => {
   const stats = [
