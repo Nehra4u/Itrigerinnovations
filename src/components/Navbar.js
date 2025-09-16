@@ -305,7 +305,7 @@ const Navbar = () => {
          </motion.div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center justify-center flex-1 space-x-8">
+          <div className="hidden lg:flex items-center justify-center flex-1 space-x-8 !ml-[136px]">
             {navItems.map((item) => (
               <div key={item.name} className="relative">
                 {item.hasModal ? (
