@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, ArrowRight, TrendingUp, Users, Clock, DollarSign, CheckCircle, Star } from 'lucide-react';
+import { ExternalLink, ArrowRight, TrendingUp, Users, Clock, DollarSign, CheckCircle, Star, Eye } from 'lucide-react';
 
 const CaseStudies = () => {
   const [selectedCase, setSelectedCase] = useState(0);
@@ -83,7 +83,7 @@ const CaseStudies = () => {
   const currentCase = caseStudies[selectedCase];
 
   return (
-    <section id="case-studies" className="section-padding bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900">
+    <section id="case-studies" className="section-padding bg-gradient-to-br from-primary-50 to-secondary-50 dark:from-gray-800 dark:to-gray-900">
       <div className="container-custom">
         {/* Section Header */}
         <motion.div

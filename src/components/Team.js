@@ -11,8 +11,8 @@ const Team = () => {
       bio: 'Visionary leader with 15+ years in software development and digital transformation.',
       expertise: ['Strategic Planning', 'Business Development', 'Technology Innovation'],
       social: {
-        linkedin: '#',
-        twitter: '#',
+        linkedin: 'https://in.linkedin.com/company/itriger-innovations-private-limited',
+        twitter: 'https://x.com/itriger70252?t=-SCfnQck6ZlSAVR_He8cJw&s=09',
         email: 'rajesh@itrigerinnovations.com'
       }
     },
@@ -23,8 +23,8 @@ const Team = () => {
       bio: 'Expert in scalable architecture, cloud solutions, and emerging technologies.',
       expertise: ['System Architecture', 'Cloud Computing', 'DevOps'],
       social: {
-        linkedin: '#',
-        github: '#',
+        linkedin: 'https://in.linkedin.com/company/itriger-innovations-private-limited',
+        github: 'https://github.com/itrigerinnovationspvtltd',
         email: 'priya@itrigerinnovations.com'
       }
     },
@@ -35,8 +35,8 @@ const Team = () => {
       bio: 'Full-stack development expert specializing in React, Node.js, and mobile apps.',
       expertise: ['Full-Stack Development', 'Mobile Apps', 'API Design'],
       social: {
-        linkedin: '#',
-        github: '#',
+        linkedin: 'https://in.linkedin.com/company/itriger-innovations-private-limited',
+        github: 'https://github.com/itrigerinnovationspvtltd',
         email: 'amit@itrigerinnovations.com'
       }
     },
@@ -47,8 +47,8 @@ const Team = () => {
       bio: 'Creative designer focused on user experience and modern interface design.',
       expertise: ['User Experience', 'Interface Design', 'Design Systems'],
       social: {
-        linkedin: '#',
-        twitter: '#',
+        linkedin: 'https://in.linkedin.com/company/itriger-innovations-private-limited',
+        twitter: 'https://x.com/itriger70252?t=-SCfnQck6ZlSAVR_He8cJw&s=09',
         email: 'neha@itrigerinnovations.com'
       }
     }

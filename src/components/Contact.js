@@ -57,8 +57,9 @@ const Contact = () => {
       title: 'Call Us',
       details: [
         'India: +91 9251916024, +91 9251916025',
-        'USA: +1 808 818 6055',
-        'UK: +44 7521 454240'
+        'USA: +1(601) 277-7607, +1 888-919-8265',
+        'UK: +44 7521 454240',
+        'AUS: +61 1800 470 825'
       ],
       color: 'from-secondary-500 to-secondary-600'
     },

@@ -41,7 +41,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="section-padding bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900">
+    <section id="about" className="section-padding bg-gradient-to-br from-primary-50 to-secondary-50 dark:from-gray-800 dark:to-gray-900">
       <div className="container-custom">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Column - Content */}
@@ -124,7 +124,7 @@ const About = () => {
             </motion.div>
           </motion.div>
 
-          {/* Right Column - Stats & Visual */}
+          {/* Right Column - Image & Stats */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -132,6 +132,27 @@ const About = () => {
             viewport={{ once: true }}
             className="space-y-8"
           >
+            {/* Hero Image */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="relative rounded-2xl overflow-hidden shadow-2xl"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                alt="Team collaboration"
+                className="w-full h-64 object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary-600/20 to-transparent"></div>
+              <div className="absolute bottom-4 left-4 right-4">
+                <div className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl p-4">
+                  <h4 className="font-bold text-gray-900 dark:text-white mb-1">Expert Team</h4>
+                  <p className="text-sm text-gray-600 dark:text-gray-300">50+ skilled professionals working together</p>
+                </div>
+              </div>
+            </motion.div>
             {/* Stats Grid */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}

@@ -35,7 +35,9 @@ const Footer = () => {
               </p>
               <div className="flex space-x-4">
                 <motion.a
-                  href="#"
+                  href="https://www.facebook.com/share/164T4wevHo/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gradient-to-r hover:from-primary-600 hover:to-secondary-600 transition-all duration-300"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
@@ -43,7 +45,9 @@ const Footer = () => {
                   <Facebook className="w-5 h-5" />
                 </motion.a>
                 <motion.a
-                  href="#"
+                  href="https://x.com/itriger70252?t=-SCfnQck6ZlSAVR_He8cJw&s=09"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gradient-to-r hover:from-primary-600 hover:to-secondary-600 transition-all duration-300"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale:0.9 }}
@@ -51,7 +55,9 @@ const Footer = () => {
                   <Twitter className="w-5 h-5" />
                 </motion.a>
                 <motion.a
-                  href="#"
+                  href="https://in.linkedin.com/company/itriger-innovations-private-limited"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gradient-to-r hover:from-primary-600 hover:to-secondary-600 transition-all duration-300"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
@@ -59,7 +65,9 @@ const Footer = () => {
                   <Linkedin className="w-5 h-5" />
                 </motion.a>
                 <motion.a
-                  href="#"
+                  href="https://in.linkedin.com/company/itriger-innovations-private-limited"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gradient-to-r hover:from-primary-600 hover:to-secondary-600 transition-all duration-300"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
@@ -67,7 +75,9 @@ const Footer = () => {
                   <Instagram className="w-5 h-5" />
                 </motion.a>
                 <motion.a
-                  href="#"
+                  href="https://github.com/itrigerinnovationspvtltd"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gradient-to-r hover:from-primary-600 hover:to-secondary-600 transition-all duration-300"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
@@ -133,9 +143,10 @@ const Footer = () => {
                 <div className="flex items-start space-x-3">
                   <Phone className="w-5 h-5 text-primary-400 mt-1 flex-shrink-0" />
                   <div className="space-y-1">
-                    <p className="text-gray-300">India: +91 9251916024</p>
-                    <p className="text-gray-300">USA: +1 808 818 6055</p>
+                    <p className="text-gray-300">India: +91 9251916024, +91 9251916025</p>
+                    <p className="text-gray-300">USA: +1(601) 277-7607, +1 888-919-8265</p>
                     <p className="text-gray-300">UK: +44 7521 454240</p>
+                    <p className="text-gray-300">AUS: +61 1800 470 825</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">

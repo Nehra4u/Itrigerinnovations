@@ -18,6 +18,7 @@ import Partnerships from './components/Partnerships';
 import Careers from './components/Careers';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
+import WorldClock from './components/WorldClock';
 // Service Pages
 import WebDevelopment from './pages/WebDevelopment';
 import MobileApps from './pages/MobileApps';
@@ -110,6 +111,7 @@ function App() {
             <Route path="/industry/it-telecom" element={<ITTelecom />} />
             <Route path="/industry/on-demand" element={<OnDemand />} />
           </Routes>
+          <WorldClock />
           <Footer />
         </div>
       </Router>
