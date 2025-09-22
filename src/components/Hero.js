@@ -9,20 +9,20 @@ const Hero = () => {
   return (
     <section id="home" className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-black">
       {/* Modern Animated Background */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 overflow-hidden">
         {/* Floating Geometric Shapes */}
         <motion.div
-          className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-primary-400/20 to-secondary-400/20 rounded-full blur-xl"
+          className="absolute top-20 left-4 sm:left-20 w-32 h-32 bg-gradient-to-r from-primary-400/20 to-secondary-400/20 rounded-full blur-xl"
           animate={{ 
             y: [0, -30, 0],
-            x: [0, 20, 0],
+            x: [0, 10, 0],
             scale: [1, 1.2, 1]
           }}
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
         />
         
         <motion.div
-          className="absolute top-40 right-32 w-24 h-24 bg-gradient-to-r from-secondary-400/30 to-primary-400/30 rounded-2xl rotate-45 blur-lg"
+          className="absolute top-40 right-4 sm:right-32 w-24 h-24 bg-gradient-to-r from-secondary-400/30 to-primary-400/30 rounded-2xl rotate-45 blur-lg"
           animate={{ 
             rotate: [45, 225, 45],
             y: [0, 40, 0]
@@ -31,7 +31,7 @@ const Hero = () => {
         />
         
         <motion.div
-          className="absolute bottom-32 left-32 w-20 h-20 bg-gradient-to-r from-primary-500/25 to-secondary-500/25 rounded-full blur-md"
+          className="absolute bottom-32 left-4 sm:left-32 w-20 h-20 bg-gradient-to-r from-primary-500/25 to-secondary-500/25 rounded-full blur-md"
           animate={{ 
             scale: [1, 1.5, 1],
             opacity: [0.3, 0.7, 0.3]
@@ -74,37 +74,37 @@ const Hero = () => {
         </div>
 
         {/* Large Gradient Orbs */}
-        <div className="absolute -top-40 -left-40 w-80 h-80 bg-gradient-to-r from-primary-500/20 to-secondary-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-gradient-to-r from-secondary-500/15 to-primary-500/15 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-0 left-0 w-80 h-80 bg-gradient-to-r from-primary-500/20 to-secondary-500/20 rounded-full blur-3xl animate-pulse transform -translate-x-1/2 -translate-y-1/2"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-r from-secondary-500/15 to-primary-500/15 rounded-full blur-3xl animate-pulse transform translate-x-1/2 translate-y-1/2" style={{ animationDelay: '2s' }}></div>
       </div>
 
       {/* Modern Hero Content */}
-      <div className="relative z-10 flex items-center justify-center min-h-screen">
-        <div className="container-custom px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="relative z-10 flex items-center justify-center min-h-screen w-full">
+        <div className="container-custom px-4 w-full max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             
             {/* Left Column - Content */}
             <motion.div
-              className="text-center lg:text-left"
+              className="text-center lg:text-left px-4 sm:px-0"
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
               {/* Premium Badge */}
               <motion.div
-                className="inline-flex items-center space-x-2 bg-gradient-to-r from-primary-500/10 to-secondary-500/10 backdrop-blur-sm border border-primary-500/20 rounded-full px-6 py-3 mb-8"
+                className="inline-flex items-center space-x-2 bg-gradient-to-r from-primary-500/10 to-secondary-500/10 backdrop-blur-sm border border-primary-500/20 rounded-full px-4 sm:px-6 py-2 sm:py-3 mb-6 sm:mb-8"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                <Sparkles className="w-5 h-5 text-primary-600 dark:text-primary-400" />
-                <span className="text-primary-600 dark:text-primary-400 font-semibold">AI-Powered Innovation</span>
+                <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-primary-600 dark:text-primary-400" />
+                <span className="text-sm sm:text-base text-primary-600 dark:text-primary-400 font-semibold">AI-Powered Innovation</span>
                 <div className="w-2 h-2 bg-primary-500 rounded-full animate-pulse"></div>
               </motion.div>
 
               {/* Main Headline */}
               <motion.h1
-                className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black mb-8 leading-[0.9]"
+                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black mb-6 sm:mb-8 leading-[0.9]"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
@@ -118,7 +118,7 @@ const Hero = () => {
 
               {/* Subtitle */}
               <motion.p
-                className="text-xl md:text-2xl mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed text-gray-600 dark:text-gray-300"
+                className="text-lg sm:text-xl md:text-2xl mb-8 sm:mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed text-gray-600 dark:text-gray-300"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -129,47 +129,47 @@ const Hero = () => {
 
               {/* CTA Buttons */}
               <motion.div
-                className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center mb-12"
+                className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start items-center mb-8 sm:mb-12"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.5 }}
               >
                 <motion.button
-                  className="group bg-primary-600 hover:bg-primary-700 text-white font-bold py-5 px-10 rounded-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-primary-500/25 flex items-center space-x-3 text-lg"
+                  className="group bg-primary-600 hover:bg-primary-700 text-white font-bold py-4 sm:py-5 px-8 sm:px-10 rounded-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-primary-500/25 flex items-center space-x-2 sm:space-x-3 text-base sm:text-lg w-full sm:w-auto justify-center"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   <span>Start Building</span>
-                  <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform duration-300" />
+                  <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1 transition-transform duration-300" />
                 </motion.button>
                 
                 <motion.button
-                  className="group bg-white/10 backdrop-blur-sm border border-white/20 dark:border-gray-700/50 text-gray-900 dark:text-white font-bold py-5 px-10 rounded-2xl transition-all duration-300 hover:bg-white/20 dark:hover:bg-gray-800/50 flex items-center space-x-3 text-lg"
+                  className="group bg-white/10 backdrop-blur-sm border border-white/20 dark:border-gray-700/50 text-gray-900 dark:text-white font-bold py-4 sm:py-5 px-8 sm:px-10 rounded-2xl transition-all duration-300 hover:bg-white/20 dark:hover:bg-gray-800/50 flex items-center space-x-2 sm:space-x-3 text-base sm:text-lg w-full sm:w-auto justify-center"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <Play className="w-6 h-6" />
+                  <Play className="w-5 h-5 sm:w-6 sm:h-6" />
                   <span>Watch Demo</span>
                 </motion.button>
               </motion.div>
 
               {/* Trust Indicators */}
               <motion.div
-                className="flex flex-wrap justify-center lg:justify-start items-center gap-8 text-sm text-gray-500 dark:text-gray-400"
+                className="flex flex-wrap justify-center lg:justify-start items-center gap-4 sm:gap-6 lg:gap-8 text-xs sm:text-sm text-gray-500 dark:text-gray-400"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
-                <div className="flex items-center space-x-2">
-                  <Award className="w-5 h-5 text-primary-500" />
+                <div className="flex items-center space-x-1 sm:space-x-2">
+                  <Award className="w-4 h-4 sm:w-5 sm:h-5 text-primary-500" />
                   <span>500+ Projects</span>
                 </div>
-                <div className="flex items-center space-x-2">
-                  <Users className="w-5 h-5 text-primary-500" />
+                <div className="flex items-center space-x-1 sm:space-x-2">
+                  <Users className="w-4 h-4 sm:w-5 sm:h-5 text-primary-500" />
                   <span>50+ Happy Clients</span>
                 </div>
-                <div className="flex items-center space-x-2">
-                  <Globe className="w-5 h-5 text-primary-500" />
+                <div className="flex items-center space-x-1 sm:space-x-2">
+                  <Globe className="w-4 h-4 sm:w-5 sm:h-5 text-primary-500" />
                   <span>Global Reach</span>
                 </div>
               </motion.div>
@@ -177,7 +177,7 @@ const Hero = () => {
 
             {/* Right Column - Interactive Visual */}
             <motion.div
-              className="relative"
+              className="relative hidden lg:block"
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -251,6 +251,38 @@ const Hero = () => {
                 >
                   <div className="text-2xl font-bold text-secondary-600">24/7</div>
                   <div className="text-sm text-gray-600 dark:text-gray-400">Support</div>
+                </motion.div>
+              </div>
+            </motion.div>
+
+            {/* Mobile Visual Elements */}
+            <motion.div
+              className="lg:hidden flex justify-center items-center mt-8"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.7 }}
+            >
+              <div className="flex space-x-6">
+                <motion.div
+                  className="w-16 h-16 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-2xl flex items-center justify-center shadow-lg"
+                  animate={{ y: [0, -10, 0] }}
+                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                >
+                  <Brain className="w-8 h-8 text-white" />
+                </motion.div>
+                <motion.div
+                  className="w-16 h-16 bg-white dark:bg-gray-800 rounded-2xl flex items-center justify-center shadow-lg border border-gray-200 dark:border-gray-700"
+                  animate={{ y: [0, -10, 0] }}
+                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+                >
+                  <Code className="w-8 h-8 text-primary-600" />
+                </motion.div>
+                <motion.div
+                  className="w-16 h-16 bg-white dark:bg-gray-800 rounded-2xl flex items-center justify-center shadow-lg border border-gray-200 dark:border-gray-700"
+                  animate={{ y: [0, -10, 0] }}
+                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                >
+                  <Database className="w-8 h-8 text-secondary-600" />
                 </motion.div>
               </div>
             </motion.div>

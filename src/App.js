@@ -63,8 +63,9 @@ const HomePage = () => (
     <Hero />
     <About />
     <Services />
+    <Technologies />
     <ClientLogos />
-    <CaseStudies />
+    {/* <CaseStudies /> */}
     <Testimonials />
     <Contact />
   </main>
@@ -74,7 +75,7 @@ function App() {
   return (
     <ThemeProvider>
       <Router>
-        <div className="App">
+        <div className="App max-w-full overflow-x-hidden">
           <Navbar />
           <Routes>
             <Route path="/" element={<HomePage />} />
